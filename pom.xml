@@ -14,21 +14,147 @@
     <name>test</name>
     <description>test</description>
     <properties>
-        <java.version>17</java.version>
+        <java.version>11</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <sonar.host.url>http://192.168.31.106:9001</sonar.host.url>
+        <sonar.login>admin</sonar.login>
+        <sonar.password>123456</sonar.password>
+        <sonar.projectKey>${project.groupId}:${project.artifactId}</sonar.projectKey>
+        <sonar.projectVersion>${project.version}</sonar.projectVersion>
+        <sonar.projectDescription>${project.description}</sonar.projectDescription>
+        <sonar.links.homepage>${project.url}</sonar.links.homepage>
+        <sonar.sourceEncoding>${project.build.sourceEncoding}</sonar.sourceEncoding>
+        <sonar.exclusions>src/test/**/*,*.js,*.css,*.html,*.vue,*.bat,*.cmd,*.md,*.NET,*.cpp</sonar.exclusions>
+        <maven-compiler-plugin.version>3.10.0</maven-compiler-plugin.version>
+        <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
+        <lejing.latest.version>${project.version}</lejing.latest.version>
+        <spring-boot.version>2.6.3</spring-boot.version>
+        <spring-cloud.version>2021.0.0</spring-cloud.version>
+        <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
+        <lombok.version>1.18.22</lombok.version>
+        <lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
+        <mysql.version>8.0.28</mysql.version>
+        <jsqlparser.version>4.1</jsqlparser.version>
+        <mybatis.starter.version>2.2.2</mybatis.starter.version>
+        <mybatis.plus.version>3.5.1</mybatis.plus.version>
+        <dynamic.datasource.version>3.5.0</dynamic.datasource.version>
+        <pageHelper.starter.version>1.4.1</pageHelper.starter.version>
+        <druid.stater.version>1.2.5</druid.stater.version>
+        <pagehelper.version>5.3.0</pagehelper.version>
+        <zipkin.starter.version>2.2.8.RELEASE</zipkin.starter.version>
+        <shiro.starter.version>1.8.0</shiro.starter.version>
+        <fastjson.version>1.2.79</fastjson.version>
+        <commons-lang3.version>3.12.0</commons-lang3.version>
+        <commons-io.version>2.11.0</commons-io.version>
+        <javase.version>3.4.1</javase.version>
+        <netty-all.version>4.1.74.Final</netty-all.version>
+        <persistence-api.version>1.0.2</persistence-api.version>
+        <servlet-api.version>2.5</servlet-api.version>
+        <smart-doc.version>2.3.7</smart-doc.version>
+        <hutool-all.version>5.7.21</hutool-all.version>
+        <activation.version>1.1.1</activation.version>
+        <guava.version>31.0.1-jre</guava.version>
+        <aliyun-sdk-oss.version>3.14.0</aliyun-sdk-oss.version>
+        <aliyun.sdk.version>4.6.0</aliyun.sdk.version>
+        <aliyun.dysmsapi.version>2.2.1</aliyun.dysmsapi.version>
+        <aliyun-oss.version>1.0.0</aliyun-oss.version>
+        <aliyun-sms.version>1.0.0</aliyun-sms.version>
+        <redisson.version>3.16.8</redisson.version>
+        <elasticsearch.version>7.17.0</elasticsearch.version>
+        <logstash.logback.version>7.1</logstash.logback.version>
+        <easypoi.starter.version>4.4.0</easypoi.starter.version>
+        <joda-time.version>2.10.12</joda-time.version>
+        <jjwt.version>0.9.1</jjwt.version>
+        <seata.starter.version>1.4.2</seata.starter.version>
+        <kryo-kryo-version>2.24.0</kryo-kryo-version>
+        <kryo-version>4.0.2</kryo-version>
+        <kryo-serializers.version>0.45</kryo-serializers.version>
+        <mapstruct.version>1.4.2.Final</mapstruct.version>
+        <alipay-sdk-java.version>4.15.0.ALL</alipay-sdk-java.version>
+        <sonar-maven-plugin.version>3.9.1.2184</sonar-maven-plugin.version>
+        <easyexcel.version>2.2.10</easyexcel.version>
+        <nacos.version>2.0.3</nacos.version>
+        <jedis.version>3.6.3</jedis.version>
+        <sentinel.version>1.8.3</sentinel.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>org.icepdf.os</groupId>
+            <artifactId>icepdf-core</artifactId>
+            <version>6.1.2</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>javax.media</groupId>
+                    <artifactId>jai-core</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>net.coobird</groupId>
+            <artifactId>thumbnailator</artifactId>
+            <version>0.4.8</version>
+        </dependency>
+        <dependency>
+            <groupId>org.typelevel</groupId>
+            <artifactId>spire_3</artifactId>
+            <version>0.18.0</version>
+        </dependency>
         <dependency>
             <groupId>org.apache.pdfbox</groupId>
             <artifactId>pdfbox</artifactId>
             <version>2.0.20</version>
         </dependency>
 
+        <dependency>
+            <groupId>e-iceblue</groupId>
+            <artifactId>spire.pdf.free</artifactId>
+            <version>5.1.0</version>
+        </dependency>
 
+        <dependency>
+            <groupId>com.dtflys.forest</groupId>
+            <artifactId>forest-spring-boot-starter</artifactId>
+            <version>1.5.26</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc6</artifactId>
+            <version>11.2.0.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.5.1</version>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.redisson</groupId>-->
+<!--            <artifactId>redisson-spring-boot-starter</artifactId>-->
+<!--            <version>3.18.0</version>-->
+<!--        </dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-redis -->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>2.7.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis-reactive</artifactId>
+            <version>2.5.13</version>
+        </dependency>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>${jedis.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -45,7 +171,43 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.7</version>
+        </dependency>
+
+        <!-- hutool -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${hutool-all.version}</version>
+        </dependency>
+        <!-- fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+        <!-- jackson -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson-bom.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+        </dependency>
     </dependencies>
+    <repositories>
+        <repository>
+            <id>com.e-iceblue</id>
+            <name>e-iceblue</name>
+            <url>https://repo.e-iceblue.cn/repository/maven-public/</url>
+        </repository>
+    </repositories>
 
     <build>
         <plugins>
