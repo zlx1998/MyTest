@@ -7,8 +7,8 @@ spring:
     database: 0
   datasource:
     driver-class-name: oracle.jdbc.OracleDriver  #oracle驱动
-    url: jdbc:oracle:thin:@test.sidb.jshrss:1521/CS_DZDA
-    username: DZDA
-    password: tqFYGxTTEUek
+    url: jdbc:oracle:thin:@xxx.xxx.xxx:1521/xxx
+    username: xxxx
+    password: xxx
 server:
   port: 80
